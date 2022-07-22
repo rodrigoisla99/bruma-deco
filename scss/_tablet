@@ -1,0 +1,59 @@
+/* TABLET */
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 20px + 5;
+    }
+
+    /* COMIENZO MAIN - Tablet*/
+    /* Slogan - Tablet */
+    #banner h2 {
+        font-size: 20px + 40;
+    }
+
+    .contenedor-tabla {
+        margin-left: 40px;
+    }
+
+    /* Quienes somos - Tablet*/
+    .quienes-somos {
+        font-size: 20px + 10;
+    }
+
+    .flex-column-reverse {
+        flex-direction: row!important;
+    }
+
+    .col-md-8 {
+        align-self: center;
+        text-align: left;
+    }
+
+    /* Contacto - Tablet*/
+    .hr-contacto {
+        margin-top: 20px;
+    }
+
+    .mt-2 {
+        margin-top: 0 !important;
+    }
+
+    /* FIN MAIN - Tablet */
+
+
+    /* COMIENZO FOOTER - Tablet */
+    /* Newsletter - Tablet */
+    .contenedor-input {
+        padding: 0 100px;
+        width: 100%;
+    }
+
+    .enviar {
+        width: 40%;
+    }
+
+    /* Direccion - Tablet */
+    .direccion-laptop {
+        display: none;
+    }
+}

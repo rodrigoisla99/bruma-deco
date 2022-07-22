@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// VARIABLES
+$color-primary: #b49b7f;
+$color-secondary: #8f6d45;
+$color-tertiary: #212529;
+
+// OPERACIONES
+$spacing: 20px;
+
+// MAPAS
+$redes: (
+    instagram: #CC0060,
+    facebook: #1773EA,
+    whatsapp: #45C655,
+);
+
+@each $red,
+$color in $redes {
+    .red-#{$red}:hover {
+        border-radius: 5px;
+        box-shadow:inset 0 0 0 10px $color;
+    }
+}
+
+// MIXIN
+@mixin marpad ($margen, $relleno) {
+    margin: $margen;
+    padding: $relleno;
+}
+
+* {
+    @include marpad(0px,0px);
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: $color-primary;
+}
+
+hr {
+    margin: 0.5rem 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: $spacing;
+}
+
+/* COMIENZO HEADER - Mobile*/
+.titulo-web {
+    color: $color-tertiary;
+}
+
+.navbar-brand {
+    font-size: $spacing;
+}
+
+.navbar {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background-color: $color-secondary;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: $color-tertiary;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $color-tertiary;
+}
+
+.form-control-nav {
+    border-radius: 5px;
+    border: 3px solid $color-primary;
+}
+
+.form-control-nav:hover {
+    transform: scaleY(1.1);
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.btn-outline-success {
+    color: $color-tertiary;
+    border-color: $color-primary;
+    border-radius: 5px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: $color-primary;
+    border-color: $color-primary;
+}
+
+.btn-outline-success:focus {
+    box-shadow: 0 0 0 0.25rem $color-tertiary;
+}
+
+/* FIN HEADER  - Mobile*/
+
+
+/* COMIENZO MAIN - Mobile */
+#banner {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    h2 {
+        font-size: $spacing + 10;
+        text-align: center;
+    }
+
+    .contenedor-uno {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+#blog {
+    .contenedor-uno {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    article {
+        margin: 30px;
+    }
+
+    img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.telas-dobladas {
+    opacity: 1;
+    animation-name: fade-in-left;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+}
+
+.boton-madera {
+  @extend .telas-dobladas;
+  animation-name: fade-in-right;
+}
+
+@keyframes fade-in-right {
+    0% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#menu-carrito {
+    text-align: center;
+
+    .contenedor-uno {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.productos {
+    margin: 0px 20px 20px;
+
+    img {
+        width: 180px;
+        height: 180px;
+        border-radius: 5px
+    }
+}
+
+.nombres-productos {
+    margin: 0;
+}
+
+/* Boton añadir al carrito */
+.anadir-carrito {
+    font-weight: bold;
+    padding: 5px;
+    width: 140px;
+    display: flex;
+    border-radius: 5px;
+    border-color: $color-secondary;
+    margin-left: 20px;
+    color: $color-secondary;
+    justify-content: center;
+}
+
+/* Seccion "Quienes somos" */
+.quienes-somos {
+    @include marpad(5px,20px);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-image: url("../Imagenes/fondo.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Seccion "Contacto"  */
+.formulario-contacto {
+    @include marpad(auto,10px);
+    width: 80%;
+    background-color: $color-secondary;
+    border-radius: 5px;
+}
+
+.form-label {
+    margin-bottom: 0;
+}
+
+.form-control {
+    border: 3px solid $color-primary;
+    outline: none;
+}
+
+.form-control-nav:focus {
+    border-color: $color-tertiary;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem $color-primary;
+}
+
+.enviar-contacto {
+        margin: auto;
+        width: 60%;
+        border-radius: 5px;
+        border-color: $color-primary;
+        text-align: center;
+        font-size: $spacing - 5;
+}
+
+.preguntas-frecuentes {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.accordion-button {
+    background-color: $color-secondary;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #212529;
+    background-color: $color-secondary;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    transform: rotate(-180deg);
+}
+
+.accordion-button:focus {
+    border-color: $color-tertiary;
+    outline: 0;
+    box-shadow: 0 0 0 0.20rem wheat;
+}
+
+.col-md-8 {
+    align-self: center;
+    text-align: center;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.form-control:focus {
+    border-color: $color-tertiary;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem $color-primary;
+}
+
+/* FIN MAIN - Mobile*/
+
+
+/* COMIENZO FOOTER - Mobile */
+/* Newsletter */
+.newsletter {
+    @include marpad(auto,3px);
+    width: max-content;
+    max-width: 500px;
+    background-color: $color-secondary;
+    border-radius: 5px;
+
+    h3 {
+        text-align: center;
+        font-size: $spacing - 5;
+        margin-bottom: 0;
+    }
+}
+
+.nombre-newsletter {
+    width: auto;
+    font-size: $spacing - 10;
+    border-radius: 5px;
+    border-color: $color-primary;
+}
+
+.correo-newsletter {
+    @extend .nombre-newsletter
+}
+
+.enviar {
+    margin: auto;
+    width: 60%;
+    border-radius: 5px;
+    border-color: $color-primary;
+    text-align: center;
+    font-size: $spacing - 10;
+    margin-top: 2px;
+}
+
+.contenedor-input {
+    padding: 0 30px;
+    width: 100%;
+}
+
+/* Direccion */
+.direccion-laptop {
+    display: none;
+}
+
+.direccion {
+    display: grid;
+    text-align: center;
+    font-size: $spacing - 7;
+    margin: 20px 30px;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 20px 30px;
+    justify-items: center;
+}
+
+/* Items */
+.items {
+    display: grid;
+    text-align: center;
+    place-content: center;
+    justify-content: center;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    a {
+        color: $color-tertiary;
+        font-size: $spacing - 5;
+        text-decoration: none;
+    }
+}
+
+/* FIN FOOTER - Mobile */
+
+@import "tablet";
+@import "laptop";

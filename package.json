@@ -1,0 +1,25 @@
+{
+  "name": "bruma-deco",
+  "version": "1.0.0",
+  "description": "E-commerce Bruma Deco",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss css/maincss.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigoisla99/bruma-deco.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigoisla99/bruma-deco/issues"
+  },
+  "homepage": "https://github.com/rodrigoisla99/bruma-deco#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

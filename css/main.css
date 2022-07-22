@@ -38,8 +38,7 @@ h1 {
 .navbar {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
-  background-color: #8f6d45;
-  position: relative; }
+  background-color: #8f6d45; }
 
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show > .nav-link {
@@ -390,13 +389,13 @@ h1 {
     display: grid;
     place-content: center;
     font-size: 13px; }
-    .direccion-laptop p {
-      margin: 0; }
+  p {
+    margin: 0; }
   .items {
     margin-left: 0;
     margin-top: 10px; }
-    .items ul {
-      padding: 0; }
+  ul {
+    padding: 0; }
   /* Redes sociales - Laptop */
   .redes-sociales {
     margin: 0;
@@ -405,32 +404,24 @@ h1 {
     grid-template-columns: 33% 33% 33%;
     place-content: center; } }
 
-    .contenedor-carrito{
-      position: absolute;
-      z-index: 1;
-      width: 350px;
-      height: 250px;
-      opacity: 0.9;
-      border-radius: 5px;
-      background-color: whitesmoke;
-      display: flex;
-      flex-direction: row;
-      list-style-type: none;
-      margin-top: 320px;
-    }
+.contenedor-carrito {
+  position: absolute;
+  z-index: 1;
+  width: 350px;
+  height: 250px;
+  opacity: 0.9;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-top: 320px; }
 
-    .nombres-elementos-carrito {
-      margin: 10px;
-    }
+.nombres-elementos-carrito {
+  margin: 10px; }
 
-    .precios-elementos-carrito {
-      margin: 10px;
-    }
+.precios-elementos-carrito {
+  margin: 10px; }
 
-    .precio-total{
-      margin: 10px;
-    }
-
-    /* .fondo-blanco-mostrar{
-      background-color: green;
-    } */
+.precio-total {
+  margin: 10px; }
