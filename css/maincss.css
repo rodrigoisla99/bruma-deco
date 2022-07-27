@@ -75,7 +75,7 @@ h1 {
 .contenedor-carrito {
   position: absolute;
   z-index: 1;
-  width: 350px;
+  width: 295px;
   height: 250px;
   opacity: 0.9;
   border-radius: 5px;
@@ -83,7 +83,10 @@ h1 {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  margin-top: 0px; }
+  margin-top: 5px; }
+
+.material-symbols-outlined {
+  cursor: pointer; }
 
 /* FIN HEADER  - Mobile*/
 /* COMIENZO MAIN - Mobile */
@@ -355,8 +358,6 @@ h1 {
   .form-control-nav {
     padding-left: 10px; }
   /* Carrito de compras */
-  .material-symbols-outlined {
-    cursor: pointer; }
   .contenedor-carrito {
     position: absolute;
     z-index: 1;
@@ -370,70 +371,97 @@ h1 {
     list-style-type: none;
     margin-top: 320px; }
   .nombres-elementos-carrito {
-    margin: 10px; }
+    margin: 10px;
+    text-align: center; }
   .precios-elementos-carrito {
     margin: 10px; }
   .precio-total {
     margin: 10px; }
-  /* FIN HEADER - Laptop */
-  /* COMIENZO MAIN - Laptop */
-  #banner h2 {
-    font-size: 90px; }
-  /* "Para casa" "Textil" - Laptop */
-  table caption {
-    font-size: 40px; }
-  /* Quienes somos - Laptop */
-  .quienes-somos {
-    font-size: 35px;
-    margin: 5px;
-    border-radius: 5px; }
-  /* Contacto - Laptop */
-  .formulario-contacto {
-    width: 60%;
-    margin: auto; }
-  .preguntas-frecuentes {
-    width: 60%;
-    margin: auto;
-    margin-top: 20px; }
-  /* FIN MAIN - Laptop */
-  /* COMIENZO FOOTER - Laptop */
-  footer h3 {
-    font-size: 20px; }
-  /* Newsletter - Laptop */
-  .nombre-newsletter, .correo-newsletter {
-    width: 100%;
-    font-size: 12px; }
-  .correo-newsletter {
-    width: 100%;
-    font-size: 12px; }
-  .enviar {
-    width: 50%;
-    font-size: 12px;
-    margin-top: 3px; }
-  .contenedor-input {
-    padding: 0 50px;
-    width: 100%; }
-  /* Direccion - Laptop */
-  .newsletter {
-    margin-top: 5px; }
-  .direccion {
-    display: none; }
-  .direccion-laptop {
-    margin-top: 10px;
-    display: grid;
-    place-content: center;
-    font-size: 13px; }
-  p {
-    margin: 0; }
-  .items {
-    margin-left: 0;
-    margin-top: 10px; }
-  ul {
-    padding: 0; }
-  /* Redes sociales - Laptop */
-  .redes-sociales {
-    margin: 0;
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    place-content: center; } }
+  .boton-vaciar {
+    width: 75px;
+    height: 30px;
+    align-self: center;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: #8f6d45;
+    color: #8f6d45;
+    justify-content: center; } }
+
+/* FIN HEADER - Laptop */
+/* COMIENZO MAIN - Laptop */
+#banner h2 {
+  font-size: 90px; }
+
+/* "Para casa" "Textil" - Laptop */
+table caption {
+  font-size: 40px; }
+
+/* Quienes somos - Laptop */
+.quienes-somos {
+  font-size: 35px;
+  margin: 5px;
+  border-radius: 5px; }
+
+/* Contacto - Laptop */
+.formulario-contacto {
+  width: 60%;
+  margin: auto; }
+
+.preguntas-frecuentes {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px; }
+
+/* FIN MAIN - Laptop */
+/* COMIENZO FOOTER - Laptop */
+footer h3 {
+  font-size: 20px; }
+
+/* Newsletter - Laptop */
+.nombre-newsletter, .correo-newsletter {
+  width: 100%;
+  font-size: 12px; }
+
+.correo-newsletter {
+  width: 100%;
+  font-size: 12px; }
+
+.enviar {
+  width: 50%;
+  font-size: 12px;
+  margin-top: 3px; }
+
+.contenedor-input {
+  padding: 0 50px;
+  width: 100%; }
+
+/* Direccion - Laptop */
+.newsletter {
+  margin-top: 5px; }
+
+.direccion {
+  display: none; }
+
+.direccion-laptop {
+  margin-top: 10px;
+  display: grid;
+  place-content: center;
+  font-size: 13px; }
+
+p {
+  margin: 0; }
+
+.items {
+  margin-left: 0;
+  margin-top: 10px; }
+
+ul {
+  padding: 0; }
+
+/* Redes sociales - Laptop */
+.redes-sociales {
+  margin: 0;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  place-content: center; }

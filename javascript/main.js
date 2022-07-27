@@ -24,37 +24,43 @@ const textoCarrito = document.querySelector(".nombres-elementos-carrito")
 const precioCarrito = document.querySelector(".precios-elementos-carrito")
 const botonCarrito = document.querySelector(".material-symbols-outlined")
 const precioTotal = document.querySelector('.precio-total')
+const vaciarCarrito = document.querySelector('.boton-vaciar')
 
 // CARRITO
 const mostrar = (elem) => {    
     const valorViejo = elem.style.visibility
-    if (valorViejo==="visible"){
-        elem.style.visibility = "hidden"
-    }else{
-        elem.style.visibility = "visible"
+    // if (valorViejo==="visible"){
+    //     elem.style.visibility = "hidden"
+    // }else{
+    //     elem.style.visibility = "visible"
+    // }
+    
+    // Operador ternario
+    valorViejo==="visible" ? elem.style.visibility = "hidden" : elem.style.visibility = "visible"
     }
-}
 
-botonCarrito.addEventListener('click', () => mostrar(fondo))
+botonCarrito.addEventListener('mouseover', () => mostrar(fondo))
 
+// AGREGAR PRODUCTOS A CARRITO
 const agregarCarrito = (carrito, preciosCarrito, nombre, precio) => {
     carrito.push(nombre.innerText)
     preciosCarrito.push(parseFloat(precio.getAttribute("value")))
-    console.log(carrito)
-    console.log(preciosCarrito)
 
     textoCarrito.innerHTML += `<li>${nombre.innerText}</li>`
     precioCarrito.innerHTML += `<li>${precio.innerText}</li>`
-    
 
     let total=0
     for (let precio of preciosCarrito) {
         total += precio
-
         // precioTotal = precioTotal+precio
     }
-    precioTotal.innerHTML =  total
-    console.log(total)
+    precioTotal.innerHTML = total
+
+    // GUARDO MI ARRAY EN FORMATO JSON EN EL LOCAL STORAGE
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    let carritoAlmacenado = JSON.parse(localStorage.getItem("carrito"))
+    carritoAlmacenado 
+    
 }
 
 for (let botonCarrito of botonesCarritos){
@@ -62,6 +68,15 @@ for (let botonCarrito of botonesCarritos){
     const precioElemento = botonCarrito.parentNode.querySelector(".precios-productos")
     botonCarrito.addEventListener('click', () => agregarCarrito(carrito, preciosCarrito, nombreElemento, precioElemento))
 }
+
+// VACIAR CARRITO
+vaciarCarrito.addEventListener('click', () => {
+    carrito = []; 
+
+fondo.removeChild(textoCarrito);
+fondo.removeChild(precioCarrito);
+fondo.removeChild(precioTotal);
+})
 
 // BUSCADOR EN TIEMPO REAL
 const filtrar = () => {
@@ -93,6 +108,9 @@ const botonEnviar = document.querySelector(".enviar-contacto"), p = document.que
 botonEnviar.addEventListener("click", () => {
     p.innerText = "Se envío correctamente"
 });
+
+
+
 
 
 // // FUNCION
