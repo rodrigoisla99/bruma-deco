@@ -2,7 +2,7 @@
 let carrito = [];
 let preciosCarrito= [];
 
-// FUNCION DE ORDEN SUPERIOR
+// // FUNCION DE ORDEN SUPERIOR
 const productos = [
     { id: 1, nombre: "Lámpara colgante", cantidad: 1, precio: 1650, img: "lampara-colgante.webp" },
     { id: 2, nombre: "Almohadón bali", cantidad: 1, precio: 1410, img: "almohadon-bali.webp" },
@@ -12,28 +12,30 @@ const productos = [
     { id: 6, nombre: "Almohadón viena", cantidad: 1, precio: 2090, img: "almohadon-viena.webp" },
     { id: 7, nombre: "Frascos kitchen", cantidad: 1, precio: 1080, img: "almohadon-viena.webp" },
     { id: 8, nombre: "Almohadón Bombay", cantidad: 1, precio: 1650, img: "almohadon-viena.webp" },
-]
+];
 
+const body = document.body;
+const vaciarCarrito = document.querySelector('.boton-vaciar')
+const fondo = document.querySelector(".contenedor-carrito")
 const formulario = document.querySelector('.form-control-nav');
 const boton = document.querySelector('.btn-outline-success');
 const resultado = document.querySelector('#resultado');
 const botonPrueba = document.querySelector('#probando')
 const botonesCarritos = document.querySelectorAll('.anadir-carrito')
-const fondo = document.querySelector(".contenedor-carrito")
 const textoCarrito = document.querySelector(".nombres-elementos-carrito")
 const precioCarrito = document.querySelector(".precios-elementos-carrito")
 const botonCarrito = document.querySelector(".material-symbols-outlined")
 const precioTotal = document.querySelector('.precio-total')
-const vaciarCarrito = document.querySelector('.boton-vaciar')
 
-// CARRITO
+
+// // CARRITO
 const mostrar = (elem) => {    
     const valorViejo = elem.style.visibility
-    // if (valorViejo==="visible"){
-    //     elem.style.visibility = "hidden"
-    // }else{
-    //     elem.style.visibility = "visible"
-    // }
+    if (valorViejo==="visible"){
+        elem.style.visibility = "hidden"
+    }else{
+        elem.style.visibility = "visible"
+    }
     
     // Operador ternario
     valorViejo==="visible" ? elem.style.visibility = "hidden" : elem.style.visibility = "visible"
@@ -41,7 +43,7 @@ const mostrar = (elem) => {
 
 botonCarrito.addEventListener('mouseover', () => mostrar(fondo))
 
-// AGREGAR PRODUCTOS A CARRITO
+// // AGREGAR PRODUCTOS A CARRITO
 const agregarCarrito = (carrito, preciosCarrito, nombre, precio) => {
     carrito.push(nombre.innerText)
     preciosCarrito.push(parseFloat(precio.getAttribute("value")))
@@ -56,11 +58,10 @@ const agregarCarrito = (carrito, preciosCarrito, nombre, precio) => {
     }
     precioTotal.innerHTML = total
 
-    // GUARDO MI ARRAY EN FORMATO JSON EN EL LOCAL STORAGE
+//     // GUARDO MI ARRAY EN FORMATO JSON EN EL LOCAL STORAGE
     localStorage.setItem("carrito", JSON.stringify(carrito));
     let carritoAlmacenado = JSON.parse(localStorage.getItem("carrito"))
     carritoAlmacenado 
-    
 }
 
 for (let botonCarrito of botonesCarritos){
@@ -69,7 +70,7 @@ for (let botonCarrito of botonesCarritos){
     botonCarrito.addEventListener('click', () => agregarCarrito(carrito, preciosCarrito, nombreElemento, precioElemento))
 }
 
-// VACIAR CARRITO
+// // VACIAR CARRITO
 vaciarCarrito.addEventListener('click', () => {
     carrito = []; 
 
@@ -78,7 +79,7 @@ fondo.removeChild(precioCarrito);
 fondo.removeChild(precioTotal);
 })
 
-// BUSCADOR EN TIEMPO REAL
+// // BUSCADOR EN TIEMPO REAL
 const filtrar = () => {
     resultado.innerHTML = "";
 
@@ -102,16 +103,33 @@ const filtrar = () => {
 boton.addEventListener('click', filtrar);
 formulario.addEventListener("keyup", filtrar)
 
-// EVENTO - FORMULARIO CONTACTO
-const botonEnviar = document.querySelector(".enviar-contacto"), p = document.querySelector(".mensaje");
+// // EVENTO - ENVIAR FORMULARIO CONTACTO
+const botonEnviar = document.querySelector(".enviar-contacto")// , p = document.querySelector(".mensaje");
 
 botonEnviar.addEventListener("click", () => {
-    p.innerText = "Se envío correctamente"
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Se envío correctamente',
+        showConfirmButton: false,
+        timer: 1500
+      })
 });
 
+// ENVIAR NEWSLETTER
+const botonEnviarNewsletter = document.querySelector(".enviar-newsletter"), p = document.querySelector(".mensaje-newsletter");
+
+botonEnviarNewsletter.addEventListener("click", () => {
+    // p.innerText = "Se envío correctamente"
+    Swal.fire('Any fool can use a computer')
+});
+   
 
 
 
+
+
+// NO SIRVE PERO POR LAS DUDAS NO LO BORRO TODAVIA
 
 // // FUNCION
 // function saludar () {
