@@ -16,7 +16,7 @@ function mostrarCarrito() {
             const { id, nombre, precio, img, cantidad } = producto
             const productoHTML = `
             <div class="producto-carrito">
-                <img src="../${img}"></img>
+                <img src="./${img}"></img>
                 <h3>${nombre}</h3>
                 <p>${precio}</p>
                 <p>Cantidad:${cantidad}</p>
