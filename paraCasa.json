@@ -5,7 +5,7 @@
        "categoria": "Para casa",
        "cantidad":1,
        "precio":1650,
-       "img":"../Imagenes/lampara-colgante.png"
+       "img":"../bruma-deco/Imagenes/lampara-colgante.png"
     },
     {
        "id":2,
@@ -13,7 +13,7 @@
        "categoria": "Para casa",
        "cantidad":1,
        "precio":385,
-       "img":"../Imagenes/frascos-especieros.png"
+       "img":"../bruma-deco/Imagenes/frascos-especieros.png"
     },
     {
        "id":3,
@@ -21,7 +21,7 @@
        "categoria": "Para casa",
        "cantidad":1,
        "precio":800,
-       "img":"../Imagenes/growler.webp"
+       "img":"../bruma-deco/Imagenes/growler.webp"
     },
     {
        "id":4,
@@ -29,6 +29,6 @@
        "categoria": "Para casa",
        "cantidad":1,
        "precio":1080,
-       "img":"../Imagenes/frascos-kitchen.webp"
+       "img":"../bruma-deco/Imagenes/frascos-kitchen.webp"
     }
  ]
