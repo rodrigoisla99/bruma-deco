@@ -4,24 +4,29 @@ const seccionCarrito = document.getElementById('carrito')
 
 function mostrarCarrito() {
     seccionCarrito.innerHTML = ""
-    if (carrito.length=== 0) {`
-    <div style="text-align: center">
-        <p>No hay productos</p>
-        <a class:"btn" href="/"> Volver al catalogo</a>
-        <a href="/">Volver al catalogo</a>
+    if (carrito.length === 0) {
+        seccionCarrito.innerHTML = `
+    </div>
+            <hr>
+        <p style="text-align: center">No hay productos</p>
+            <hr>
     </div>
     `
     } else {
         for (producto of carrito) {
             const { id, nombre, precio, img, cantidad } = producto
             const productoHTML = `
+            <hr>
             <div class="producto-carrito">
-                <img src="./${img}"></img>
-                <h3>${nombre}</h3>
-                <p>${precio}</p>
-                <p>Cantidad:${cantidad}</p>
-                <button class="btn" onclick="quitarDelCarrito(${id})">Eliminar</button>
+                    <img src="./${img}"></img>
+                <div class="especificaciones-carrito">    
+                    <h3>${nombre}</h3>
+                    <p>$${precio}</p>
+                    <p>Cantidad: ${cantidad}</p>
+                </div>
+                <button class="eliminar-carrito" onclick="quitarDelCarrito(${id})">Eliminar</button>
             </div>
+            <hr>
             `
             seccionCarrito.innerHTML += productoHTML
         }
@@ -53,9 +58,9 @@ function mostrarResumen() {
     const total = calcularTotal()
     const resumenHTML = `
     <div class="resumen">
-    <h3>Resumen</h3>
-    <p>Total: $${total}</p>
-    <a class="btn" href="../Paginas/comprar.html">Comprar</a>
+    <h1>Resumen</h1>
+    <p class="total">Total: $${total}</p>
+    <button class="boton-comprar"><a class="boton-comprar" href="../Paginas/comprar.html">Comprar</a></button>
     </div>`
 
     seccionResumen.innerHTML = resumenHTML

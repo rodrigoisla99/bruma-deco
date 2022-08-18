@@ -61,7 +61,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../Paginas/carrito.html"><span
-                                    class="material-symbols-outlined">shopping_cart</span> </a>
+                                    class="material-symbols-outlined">shopping_cart</span><span id="contadorCarrito">0</span></a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -81,6 +81,8 @@
     <main>
         <hr>
 
+        <h1>Comprar</h1>
+
         <section id="finCompra" class="flex center">
             <form class="formCompra flex flex-column">
                 <label for="nombre">Nombre</label>
@@ -89,6 +91,8 @@
                 <input type="email" id="email" name="email" placeholder="Email">
                 <label for="tarjeta">Nro. tarjeta</label>
                 <input type="text" id="tarjeta" placeholder="Nro. tarjeta">
+                <label for="DNI titular de la tarjeta">DNI titular de la tarjeta</label>
+                <input type="text" id="nombre" name="nombre" placeholder="DNI titular de la tarjeta">
                 <label for="vencimiento">Fecha de vencimiento</label>
                 <input type="text" id="vencimiento" placeholder="Fecha de vencimiento">
                 <label for="codigo">Código de seguridad</label>
@@ -96,7 +100,6 @@
                 <button type="submit" id="confirmarCompra">Confirmar</button>
             </form>
         </section>
-
 
     </main>
 
@@ -187,6 +190,10 @@
 
         <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
         <script src="../js/cleave.js"></script>
+
+         <!-- Link Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
+
 
     <!-- Link a JavaScript -->
     <script src="../javascript/comprar.js"></script>

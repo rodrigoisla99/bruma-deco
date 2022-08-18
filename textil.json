@@ -1,0 +1,26 @@
+[
+    {
+       "id":1,
+       "nombre":"Almohadón bali",
+       "categoria": "Textil",
+       "cantidad":1,
+       "precio":1410,
+       "img":"../Imagenes/almohadon-bali.webp"
+    },
+    {
+       "id":2,
+       "nombre":"Almohadón viena",
+       "categoria": "Textil",
+       "cantidad":1,
+       "precio":2090,
+       "img":"../Imagenes/almohadon-viena.webp"
+    },
+    {
+       "id":3,
+       "nombre":"Almohadón Bombay",
+       "categoria": "Textil",
+       "cantidad":1,
+       "precio":1650,
+       "img":"../Imagenes/almohadon-viena.webp"
+    }
+ ]

@@ -38,6 +38,14 @@
         margin-top: 0 !important;
     }
 
+    .producto-carrito {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px 100px;
+        height: 100px;
+    }
+
     /* FIN MAIN - Tablet */
 
 

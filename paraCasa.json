@@ -2,50 +2,33 @@
     {
        "id":1,
        "nombre":"Lámpara colgante",
+       "categoria": "Para casa",
        "cantidad":1,
        "precio":1650,
        "img":"../Imagenes/lampara-colgante.png"
     },
     {
        "id":2,
-       "nombre":"Almohadón bali",
-       "cantidad":1,
-       "precio":1410,
-       "img":"../Imagenes/almohadon-bali.webp"
-    },
-    {
-       "id":3,
        "nombre":"Frascos especieros",
+       "categoria": "Para casa",
        "cantidad":1,
        "precio":385,
        "img":"../Imagenes/frascos-especieros.png"
     },
     {
-       "id":4,
+       "id":3,
        "nombre":"Growler",
+       "categoria": "Para casa",
        "cantidad":1,
        "precio":800,
        "img":"../Imagenes/growler.webp"
     },
     {
-       "id":5,
-       "nombre":"Almohadón viena",
-       "cantidad":1,
-       "precio":2090,
-       "img":"../Imagenes/almohadon-viena.webp"
-    },
-    {
-       "id":6,
+       "id":4,
        "nombre":"Frascos kitchen",
+       "categoria": "Para casa",
        "cantidad":1,
        "precio":1080,
        "img":"../Imagenes/frascos-kitchen.webp"
-    },
-    {
-       "id":7,
-       "nombre":"Almohadón Bombay",
-       "cantidad":1,
-       "precio":1650,
-       "img":"../Imagenes/almohadon-viena.webp"
     }
  ]

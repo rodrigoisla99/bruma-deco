@@ -1,5 +1,5 @@
 async function fetchProductos() {
-    const response = await fetch('../productos.json');
+    const response = await fetch('../paraCasa.json');
     return await response.json(); 
 }
 
@@ -9,12 +9,14 @@ function mostrarCatalogo () {
     for (producto of catalogo) {
         const {id, nombre, precio, img} = producto
         const productoHTML = `
-        <div class="producto">
+        <section id="menu-carrito">
+        <div class="productos">
             <img src="${img}"></img>
             <h3>${nombre}</h3>
             <p>$${precio}</p>
-            <button class="btn" onclick="sumarAlCarrito(${id})">Agregar al carrito</button>
+            <button class="anadir-carrito" onclick="sumarAlCarrito(${id})">Agregar al carrito</button>
         </div>
+        </section>
     `
     seccionProductos.innerHTML += productoHTML
     }
@@ -30,7 +32,7 @@ fetchProductos().then(productos => {
 const carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
 function sumarAlCarrito (id) {
-    const producto = catalogo.find(p => p.id == id) 
+    const producto = catalogo.find(producto => producto.id == id) 
 
     if (carrito.find(producto => producto.id == id)) {
         const producto = carrito.find(producto => producto.id == id)
@@ -41,7 +43,6 @@ function sumarAlCarrito (id) {
             cantidad: 1
         })
     }
-    carrito.push(producto)
     guardarCarrito()
 };
 
@@ -49,7 +50,9 @@ function guardarCarrito(){
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
+const contadorCarrito = document.getElementById('contadorCarrito')
 
+contadorCarrito.innerText = carrito.length
 
 
 // ESTO ES LO QUE TENIA Y SIRVE
@@ -69,18 +72,18 @@ function guardarCarrito(){
 //     { id: 8, nombre: "Almohadón Bombay", cantidad: 1, precio: 1650, img: "almohadon-viena.webp" },
 // ];
 
-// const body = document.body;
-// const vaciarCarrito = document.querySelector('.boton-vaciar')
-// const fondo = document.querySelector(".contenedor-carrito")
-// const formulario = document.querySelector('.form-control-nav');
-// const boton = document.querySelector('.btn-outline-success');
-// const resultado = document.querySelector('#resultado');
-// const botonPrueba = document.querySelector('#probando')
-// const botonesCarritos = document.querySelectorAll('.anadir-carrito')
-// const textoCarrito = document.querySelector(".nombres-elementos-carrito")
-// const precioCarrito = document.querySelector(".precios-elementos-carrito")
-// const botonCarrito = document.querySelector(".material-symbols-outlined")
-// const precioTotal = document.querySelector('.precio-total')
+const body = document.body;
+const vaciarCarrito = document.querySelector('.boton-vaciar')
+const fondo = document.querySelector(".contenedor-carrito")
+const formulario = document.querySelector('.form-control-nav');
+const boton = document.querySelector('.btn-outline-success');
+const resultado = document.querySelector('#resultado');
+const botonPrueba = document.querySelector('#probando')
+const botonesCarritos = document.querySelectorAll('.anadir-carrito')
+const textoCarrito = document.querySelector(".nombres-elementos-carrito")
+const precioCarrito = document.querySelector(".precios-elementos-carrito")
+const botonCarrito = document.querySelector(".material-symbols-outlined")
+const precioTotal = document.querySelector('.precio-total')
 
 
 // // // CARRITO
@@ -134,7 +137,7 @@ function guardarCarrito(){
 // fondo.removeChild(precioTotal);
 // })
 
-// // // BUSCADOR EN TIEMPO REAL
+// BUSCADOR EN TIEMPO REAL
 // const filtrar = () => {
 //     resultado.innerHTML = "";
 
@@ -158,26 +161,28 @@ function guardarCarrito(){
 // boton.addEventListener('click', filtrar);
 // formulario.addEventListener("keyup", filtrar)
 
-// // // EVENTO - ENVIAR FORMULARIO CONTACTO
-// const botonEnviar = document.querySelector(".enviar-contacto")// , p = document.querySelector(".mensaje");
+// // EVENTO - ENVIAR FORMULARIO CONTACTO
+const botonEnviar = document.querySelector(".enviar-contacto")// , p = document.querySelector(".mensaje");
 
-// botonEnviar.addEventListener("click", () => {
-//     Swal.fire({
-//         position: 'top-end',
-//         icon: 'success',
-//         title: 'Se envío correctamente',
-//         showConfirmButton: false,
-//         timer: 1500
-//       })
-// });
+botonEnviar.addEventListener("click", () => {
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Se envío correctamente',
+        showConfirmButton: false,
+        timer: 1500
+      })
+});
+
+
+// EVENTO - ENVIAR NEWSLETTER
+const botonEnviarNewsletter = document.querySelector(".enviar") , p = document.querySelector(".mensaje");
+
+botonEnviarNewsletter.addEventListener("click", () => {
+    // p.innerText = "Se envío correctamente" (no funciona)
+    Swal.fire('Se envío correctamente')
+});
 // HASTA ACA ES LO QUE TENIA Y SIRVE
-
-// // ENVIAR NEWSLETTER
-// const botonEnviarNewsletter = document.querySelector(".enviar-newsletter"), p = document.querySelector(".mensaje-newsletter");
-
-// botonEnviarNewsletter.addEventListener("click", () => {
-//     p.innerText = "Se envío correctamente"
-// });
    
 
 

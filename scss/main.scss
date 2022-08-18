@@ -244,7 +244,7 @@ h1 {
 .anadir-carrito {
     font-weight: bold;
     padding: 5px;
-    width: 140px;
+    // width: 140px;
     display: flex;
     border-radius: 5px;
     border-color: $color-secondary;
@@ -338,6 +338,115 @@ h1 {
     box-shadow: 0 0 0 0.25rem $color-primary;
 }
 
+// Seccion carrito
+#resumen {
+    justify-content: center;
+}
+
+.producto-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 100px;
+    height: 100px;
+}
+
+.especificaciones-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.boton-comprar {
+    font-weight: bold;
+    width: 140px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border-color: $color-secondary;
+    color: $color-secondary;
+    text-decoration: none;
+    margin: auto;
+}
+
+.boton-comprar:hover {
+    color: #8f6d45;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.total {
+    text-align: center;
+}
+
+// .boton-comprar {
+//     font-weight: bold;
+//     padding: 2px;
+//     display: flex;
+//     border-radius: 5px;
+//     border-color: $color-secondary;
+//     color: $color-secondary;
+//     justify-content: center;
+// }
+
+// Seccion comprar
+.flex-column {
+    flex-direction: column!important;
+    display: grid;
+    background-color: #8f6d45;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#confirmarCompra {
+    font-weight: bold;
+    width: 140px;
+    display: flex;
+    border-radius: 5px;
+    border-color: $color-secondary;
+    color: $color-secondary;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5px;
+}
+
+#nombre{
+    border: 3px solid #b49b7f;
+    outline: none;
+    border-radius: 5px;
+    padding: .375rem 0.75rem;
+width: 100%;
+}
+
+#nombre:focus {
+    border-color: #212529;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #b49b7f;
+}
+
+#email{
+    @extend #nombre
+}
+
+#tarjeta{
+    @extend #nombre
+}
+
+#vencimiento{
+    @extend #nombre
+}
+
+#codigo{
+    @extend #nombre
+}
+
+
 /* FIN MAIN - Mobile*/
 
 
@@ -360,6 +469,7 @@ h1 {
 .nombre-newsletter {
     width: auto;
     font-size: $spacing - 10;
+    padding-left: 2px;
     border-radius: 5px;
     border-color: $color-primary;
 }

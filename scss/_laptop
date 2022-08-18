@@ -86,7 +86,37 @@
         margin-top: 20px;
     }
 
-    /* FIN MAIN - Laptop */
+    /* Seccion carrito */
+    .eliminar-carrito {
+        font-weight: bold;
+        width: 140px;
+        height: 40px;
+        align-self: center;
+        border-radius: 5px;
+        border-color: #8f6d45;
+        color: #8f6d45;
+    }
+
+    .producto-carrito {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 100px;
+        height: 100px;
+    }
+        
+        h3 {font-size: 20px;}
+
+        /* .flex  {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        } */
+
+    /* Seccion comprar */
+
+
+   /* FIN MAIN - Laptop */
 
 
     /* COMIENZO FOOTER - Laptop */
@@ -150,6 +180,8 @@
         grid-template-columns: 33% 33% 33%;
         place-content: center;
     }
+
+    
   
 
   

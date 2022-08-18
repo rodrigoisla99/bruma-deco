@@ -165,7 +165,6 @@ h1 {
 .anadir-carrito {
   font-weight: bold;
   padding: 5px;
-  width: 140px;
   display: flex;
   border-radius: 5px;
   border-color: #8f6d45;
@@ -245,6 +244,75 @@ h1 {
   outline: 0;
   box-shadow: 0 0 0 0.25rem #b49b7f; }
 
+#resumen {
+  justify-content: center; }
+
+.producto-carrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 100px;
+  height: 100px; }
+
+.especificaciones-carrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+
+.boton-comprar {
+  font-weight: bold;
+  width: 140px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  border-color: #8f6d45;
+  color: #8f6d45;
+  text-decoration: none;
+  margin: auto; }
+
+.boton-comprar:hover {
+  color: #8f6d45; }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.total {
+  text-align: center; }
+
+.flex-column {
+  flex-direction: column !important;
+  display: grid;
+  background-color: #8f6d45;
+  border-radius: 5px;
+  padding: 10px; }
+
+#confirmarCompra {
+  font-weight: bold;
+  width: 140px;
+  display: flex;
+  border-radius: 5px;
+  border-color: #8f6d45;
+  color: #8f6d45;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5px; }
+
+#nombre, #email, #tarjeta, #vencimiento, #codigo {
+  border: 3px solid #b49b7f;
+  outline: none;
+  border-radius: 5px;
+  padding: .375rem 0.75rem;
+  width: 100%; }
+
+#nombre:focus, #email:focus, #tarjeta:focus, #vencimiento:focus, #codigo:focus {
+  border-color: #212529;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #b49b7f; }
+
 /* FIN MAIN - Mobile*/
 /* COMIENZO FOOTER - Mobile */
 /* Newsletter */
@@ -263,6 +331,7 @@ h1 {
 .nombre-newsletter, .correo-newsletter {
   width: auto;
   font-size: 10px;
+  padding-left: 2px;
   border-radius: 5px;
   border-color: #b49b7f; }
 
@@ -336,6 +405,12 @@ h1 {
     margin-top: 20px; }
   .mt-2 {
     margin-top: 0 !important; }
+  .producto-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 100px;
+    height: 100px; }
   /* FIN MAIN - Tablet */
   /* COMIENZO FOOTER - Tablet */
   /* Newsletter - Tablet */
@@ -412,6 +487,32 @@ table caption {
   margin: auto;
   margin-top: 20px; }
 
+/* Seccion carrito */
+.eliminar-carrito {
+  font-weight: bold;
+  width: 140px;
+  height: 40px;
+  align-self: center;
+  border-radius: 5px;
+  border-color: #8f6d45;
+  color: #8f6d45; }
+
+.producto-carrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 100px;
+  height: 100px; }
+
+h3 {
+  font-size: 20px; }
+
+/* .flex  {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        } */
+/* Seccion comprar */
 /* FIN MAIN - Laptop */
 /* COMIENZO FOOTER - Laptop */
 footer h3 {
