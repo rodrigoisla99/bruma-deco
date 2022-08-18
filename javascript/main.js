@@ -3,7 +3,7 @@ async function fetchProductos() {
     return await response.json(); 
 }
 
-const seccionProductos = document.querySelector("#productos")
+const seccionProductos = document.querySelectorAll("#productos")
 
 function mostrarCatalogo () {
     for (producto of catalogo) {
