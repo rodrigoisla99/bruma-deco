@@ -1,5 +1,5 @@
 async function fetchProductos() {
-    const response = await fetch('../bruma-deco/paraCasa.json');
+    const response = await fetch('./bruma-deco/paraCasa.json');
     return await response.json(); 
 }
 
