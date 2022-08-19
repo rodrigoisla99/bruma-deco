@@ -1,0 +1,74 @@
+[
+    {
+       "id":1,
+       "nombre":"Lámpara colgante",
+       "categoria": "Para casa",
+       "cantidad":1,
+       "precio":1650,
+       "img":"../bruma-deco/Imagenes/lampara-colgante.png"
+    },
+    {
+       "id":2,
+       "nombre":"Frascos especieros",
+       "categoria": "Para casa",
+       "cantidad":1,
+       "precio":385,
+       "img":"../bruma-deco/Imagenes/frascos-especieros.png"
+    },
+    {
+       "id":3,
+       "nombre":"Growler",
+       "categoria": "Para casa",
+       "cantidad":1,
+       "precio":800,
+       "img":"../bruma-deco/Imagenes/growler.webp"
+    },
+    {
+       "id":4,
+       "nombre":"Frascos kitchen",
+       "categoria": "Para casa",
+       "cantidad":1,
+       "precio":1080,
+       "img":"../bruma-deco/Imagenes/frascos-kitchen.webp"
+    },
+    {
+      "id":5,
+      "nombre":"Almohadón Viena",
+      "categoria": "Textil",
+      "cantidad":1,
+      "precio":1080,
+      "img":"../bruma-deco/Imagenes/almohadon-viena.webp"
+   },
+   {
+      "id":6,
+      "nombre":"Almohadón Bali",
+      "categoria": "Textil",
+      "cantidad":1,
+      "precio":1080,
+      "img":"../bruma-deco/Imagenes/almohadon-bali.webp"
+   },
+   {
+      "id":6,
+      "nombre":"Almohadón Bombay",
+      "categoria": "Textil",
+      "cantidad":1,
+      "precio":1080,
+      "img":"../bruma-deco/Imagenes/almohadon-bombay.webp"
+   },
+   {
+      "id":7,
+      "nombre":"Almohadón Bali",
+      "categoria": "Textil",
+      "cantidad":1,
+      "precio":1080,
+      "img":"../bruma-deco/Imagenes/almohadon-bali.webp"
+   },
+   {
+      "id":8,
+      "nombre":"Dispenser",
+      "categoria": "Para casa",
+      "cantidad":1,
+      "precio":1080,
+      "img":"../bruma-deco/Imagenes/Jabon_liquido.webp"
+   }
+ ]
