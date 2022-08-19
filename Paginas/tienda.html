@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Meta Keywords -->
+    <!-- Meta keywords -->
     <meta name="keywords"
-        content="bruma, deco, decoracion, decorados, espacios, interiores, almohadones, sillones, diseño, casa, hogar, vivienda, textil, bariloche">
+        content="bruma, deco, decoracion, interiores, almohadones, sillones, diseño, casa, hogar, vivienda, textil, bariloche, telas">
 
     <!-- Meta description -->
-    <meta name="description" content="En Bruma Deco te ayudamos a decorar ese espacio que tanto amas y soñas tener">
+    <meta name="description"
+        content="En Bruma Deco te ayudamos a decorar ese espacio que tanto amas y soñas tener. Los almohadones que buscas al mejor precio.">
 
     <!-- Favicon -->
-    <link rel="icon" href="../bruma-deco/Imagenes/favicon.webp">
+    <link rel="icon" href="../Imagenes/favicon.webp">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,12 +26,19 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Link a CSS -->
-    <link rel="stylesheet" href="css/maincss.css">
+    <link rel="stylesheet" href="../css/maincss.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Fuente: Roboto Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Titulo -->
-    <title>Bruma Deco</title>
+    <title>Bruma - Textil</title>
 </head>
 
 <body>
@@ -47,27 +55,22 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../bruma-deco/Paginas/tienda.html">Tienda</a>
+                            <a class="nav-link" href="../Paginas/para-casa.html">Para casa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../bruma-deco/Paginas/para-casa.html">Para casa</a>
+                            <a class="nav-link" href="../Paginas/textil.html">Textil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../bruma-deco/Paginas/textil.html">Textil</a>
+                            <a class="nav-link" href="../Paginas/quienes-somos.html">¿Quiénes somos?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../bruma-deco/Paginas/quienes-somos.html">¿Quiénes
-                                somos?</a>
+                            <a class="nav-link" href="../Paginas/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../bruma-deco/Paginas/contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../bruma-deco/Paginas/carrito.html"><span
-                                    class="material-symbols-outlined">shopping_cart</span><span id="contadorCarrito">0</span></a>
+                            <a class="nav-link" href="../Paginas/carrito.html"><span class="material-symbols-outlined">shopping_cart</span> <span id="contadorCarrito">0</span></a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -80,7 +83,7 @@
                     <div class="contenedor-carrito" style="visibility: hidden;">
                         <p class="nombres-elementos-carrito"><b>Producto</b></p>
                         <p class="precios-elementos-carrito"><b>Precio</b></p>
-                        <p class="precio-total"><b>Total</b></p>
+                        <p class="precio-total"><b>Total</b> </p>
                         <button class="boton-vaciar">Vaciar</button>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
@@ -96,82 +99,39 @@
     <main>
         <hr>
 
-        <section id="banner">
-            <img src="../bruma-deco/Imagenes/espacio-decorado.webp" alt="">
-            <h2 class="contenedor-uno">Armá tu espacio, <br> decorá tu vida</h2>
+        <h1>Textil</h1>
+
+        <section id="productos" class="flex center">
+
         </section>
-
-        <hr>
-
-        <section id="blog">
-            <div class="contenedor-uno">
-                <article>
-                    <img class="boton-madera" src="Imagenes/boton-madera.webp" alt="Boton de madera">
-                </article>
-                <article>
-                    <img class="telas-dobladas" src="Imagenes/telas.webp" alt="Telas dobladas">
-                </article>
-                <article>
-                    <img class="boton-madera" src="Imagenes/boton-madera.webp" alt="Boton de madera">
-                </article>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- <section id="productos" class="flex center">
-
-        </section> -->
 
         <!-- <section id="menu-carrito">
             <div class="contenedor-uno">
                 <div class="productos">
-                    <img class="jabon-liquido" src="../bruma-deco/Imagenes/Jabon_liquido.webp"
-                        alt="Jabon liquido">
-                    <p class="nombres-productos">Dispenser</p>
+                    <img class="jabon-liquido" src="../Imagenes/almohadon-bali.webp" alt="Almohadón Bali">
+                    <p class="nombres-productos">Almohadón Bali</p>
                     <br>
-                    <p class="precios-productos" value=450>$450</p>
+                    <p class="precios-productos" value=1410>$1.410</p>
                     <input class="anadir-carrito" type="submit" value="Añadir al carrito">
                 </div>
 
                 <div class="productos">
-                    <img class="lampara-colgante" src="../bruma-deco/Imagenes/lampara-colgante.webp"
-                        alt="Lampara colgante">
-                    <p class="nombres-productos">Lampara colgante</p>
+                    <img class="lampara-colgante" src="../Imagenes/almohadon-bombay.webp" alt="Almohadón Bombay">
+                    <p class="nombres-productos">Almohadón Bombay</p>
                     <br>
                     <p class="precios-productos" value=1650>$1.650</p>
                     <input class="anadir-carrito" type="submit" value="Añadir al carrito">
                 </div>
 
                 <div class="productos">
-                    <img class="frascos-especieros" src="../bruma-deco/Imagenes/frascos-especieros.webp"
-                        alt="Frascos especieros">
-                    <p class="nombres-productos">Frascos especieros</p>
-                    <br>
-                    <p class="precios-productos" value=385>$385</p>
-                    <input class="anadir-carrito" type="submit" value="Añadir al carrito">
-                </div>
-
-                <div class="productos">
-                    <img class="almohadon-viena" src="../bruma-deco/Imagenes/almohadon-viena.webp"
-                        alt="Almohadon Viena">
+                    <img class="frascos-especieros" src="../Imagenes/almohadon-viena.webp" alt="Almohadón Viena">
                     <p class="nombres-productos">Almohadón Viena</p>
-                    <br> 
-                    <p class="precios-productos" value=2090>$2.090</p>
-                    <input class="anadir-carrito" type="submit" value="Añadir al carrito">
-                </div>
-
-                <div class="productos">
-                    <img class="growler" src="../bruma-deco/Imagenes/growler.webp" alt="Growler">
-                    <p class="nombres-productos">Growler</p>
                     <br>
-                    <p class="precios-productos" value=800>$800</p>
+                    <p class="precios-productos" value=2290>$2.290</p>
                     <input class="anadir-carrito" type="submit" value="Añadir al carrito">
                 </div>
-                
             </div>
         </section> -->
-
     </main>
     <!-- Fin Main -->
 
@@ -185,6 +145,7 @@
 
                     <section class="newsletter">
                         <h3>Newsletter</h3>
+
                         <form class="newsletter" action="">
                             <div class="contenedor-input">
                                 <input type="text" name="nombre" placeholder="Nombre" class="nombre-newsletter">
@@ -200,8 +161,8 @@
                             </div>
                         </form>
                     </section>
-                </div>
 
+                </div>
                 <div class="col-sm-12 col-xl-4 align-self-center">
                     <section class="direccion">
                         <p>Av. Benito Boock 245 <br> Kilometro 4 <br> San Carlos de Bariloche</p>
@@ -211,45 +172,40 @@
                         <p>Av. Benito Boock 245 - KM 4 - San Carlos de Bariloche</p>
                     </section>
                 </div>
-
                 <div class="col-sm-12 col-xl-2 align-self-center">
                     <section class="redes-sociales">
                         <a href="https://www.instagram.com/brumaadeco/" target="_blank">
-                            <img class="red-instagram" src="../bruma-deco/Imagenes/instagram.webp"
-                                alt="Instagram">
+                            <img class="red-instagram" src="../Imagenes/instagram.webp" alt="Instagram">
                         </a>
                         <a href="https://www.facebook.com/Brumaadeco" target="_blank">
-                            <img class="red-facebook" src="../bruma-deco/Imagenes/facebook.webp"
-                                alt="Facebook">
+                            <img class="red-facebook" src="../Imagenes/facebook.webp" alt="Facebook">
                         </a>
                         <a href="https://web.whatsapp.com/" target="_blank">
-                            <img class="red-whatsapp" src="../bruma-deco/Imagenes/whatsapp.webp"
-                                alt="Whatsapp">
+                            <img class="red-whatsapp" src="../Imagenes/whatsapp.webp" alt="Whatsapp">
                         </a>
                     </section>
                 </div>
-
                 <div class="col-sm-12 col-xl-2 align-self-center">
                     <section class="items">
                         <ul>
                             <li>
-                                <a href="index.html">Inicio</a>
+                                <a href="../index.html">Inicio</a>
                             </li>
 
                             <li>
-                                <a href="../bruma-deco/Paginas/para-casa.html">Para casa</a>
+                                <a href="../Paginas/para-casa.html">Para casa</a>
                             </li>
 
                             <li>
-                                <a href="../bruma-deco/Paginas/textil.html">Textil</a>
+                                <a href="../Paginas/textil.html">Textil</a>
                             </li>
 
                             <li>
-                                <a href="../bruma-deco/Paginas/quienes-somos.html">Quiénes somos</a>
+                                <a href="../Paginas/quienes-somos.html">Quiénes somos</a>
                             </li>
 
                             <li>
-                                <a href="../bruma-deco/Paginas/contacto.html">Contacto</a>
+                                <a href="../Paginas/contacto.html">Contacto</a>
                             </li>
                         </ul>
                     </section>
@@ -257,7 +213,7 @@
             </div>
         </div>
     </footer>
-    <!-- Fin pie de pagina -->
+    <!-- Fin Footer -->
 
     <!-- Link a Js Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -268,7 +224,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
 
     <!-- Link a JavaScript -->
-    <script src="./javascript/main.js"></script>
+    <script src="../javascript/main.js"></script>
 </body>
 
 </html>
