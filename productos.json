@@ -41,14 +41,6 @@
    },
    {
       "id":6,
-      "nombre":"Almohadón Bali",
-      "categoria": "Textil",
-      "cantidad":1,
-      "precio":1080,
-      "img":"../bruma-deco/Imagenes/almohadon-bali.webp"
-   },
-   {
-      "id":6,
       "nombre":"Almohadón Bombay",
       "categoria": "Textil",
       "cantidad":1,
